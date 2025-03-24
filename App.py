@@ -71,7 +71,7 @@ if st.button("✅ Validar"):
 
 # 📌 PIE DE PÁGINA
 st.markdown(f"""
-    <hr style="margin-top:40px; border-color:{COLOR_LINEA};">
+    <hr style="margin-top:40px; border-color:#dcdcda;">
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
         Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>
     </div>
