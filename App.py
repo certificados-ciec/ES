@@ -73,6 +73,6 @@ if st.button("✅ Validar"):
 st.markdown(f"""
     <hr style="margin-top:40px; border-color:#dcdcda;">
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
-        Aplicación oficial de validación - CIEC
+        Aplicación oficial de validación de Eventos organizados o con participación del CIEC de la Facultad de Ciencias UPTC
     </div>
 """, unsafe_allow_html=True)
