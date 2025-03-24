@@ -16,7 +16,7 @@ URL_APROBADOS = "https://docs.google.com/spreadsheets/d/1_Kfc2LDo6kP9e0RgwZQVkRy
 # 🖼️ ENCABEZADO CON LOGO
 st.markdown(f"""
     <div style="text-align:center;">
-        <img src="{LOGO_URL}" width="200">
+        <img src="{LOGO_URL}" width="800">
         <h1 style="color:{COLOR_TITULO}; margin-bottom:0;">Validación de Participación</h1>
         <p style="font-size:18px; color:{COLOR_TEXTO}; margin-top:5px;">
             Ingrese el evento y su contraseña para descargar su certificado.
