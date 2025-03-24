@@ -47,9 +47,10 @@ Contiene:
 
 ## 📦 Requisitos
 
-Incluye un archivo `requirements.txt` con:
+Incluye un archivo `requirements.txt` con: 
 
 streamlit pandas
+
 ---
 
 ## ▶️ Despliegue en Streamlit Cloud
