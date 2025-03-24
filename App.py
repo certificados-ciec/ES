@@ -1,15 +1,30 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Validación de Participación", page_icon="📄")
+# 🎨 CONFIGURACIÓN DE DISEÑO
+st.set_page_config(page_title="Validación de Participación", page_icon="🎫", layout="centered")
 
-st.title("🎫 Validación de Participación en Eventos")
-st.markdown("Seleccione su evento e ingrese su contraseña para descargar su certificado en PDF.")
+LOGO_URL = "https://raw.githubusercontent.com/certificados-ciec/ES/main/Logo.png"
+COLOR_TITULO = "#f0b124"       # Dorado fuerte
+COLOR_BOTON = "#f3d027"        # Dorado claro
+COLOR_TEXTO = "#000000"        # Negro
 
-# URLs de las hojas públicas
+# 🧾 URLs de las hojas públicas
 URL_EVENTOS = "https://docs.google.com/spreadsheets/d/1jtnIcVBFCRX-lunJk3YCFtxOXMNbsarAemgOnBsvXDY/gviz/tq?tqx=out:csv"
 URL_APROBADOS = "https://docs.google.com/spreadsheets/d/1_Kfc2LDo6kP9e0RgwZQVkRyuQz2_utElTbp5v7aRw-Q/gviz/tq?tqx=out:csv"
 
+# 🖼️ ENCABEZADO CON LOGO
+st.markdown(f"""
+    <div style="text-align:center;">
+        <img src="{LOGO_URL}" width="200">
+        <h1 style="color:{COLOR_TITULO}; margin-bottom:0;">Validación de Participación</h1>
+        <p style="font-size:18px; color:{COLOR_TEXTO}; margin-top:5px;">
+            Ingrese el evento y su contraseña para descargar su certificado.
+        </p>
+    </div>
+""", unsafe_allow_html=True)
+
+# 📊 Cargar datos
 @st.cache_data
 def cargar_datos():
     df_eventos = pd.read_csv(URL_EVENTOS, dtype=str).fillna("")
@@ -19,27 +34,45 @@ def cargar_datos():
 try:
     df_eventos, df_aprobados = cargar_datos()
 except:
-    st.error("❌ Error al cargar las hojas. Verifique que sean públicas.")
+    st.error("❌ No se pudo cargar la información. Verifique que las hojas estén públicas.")
     st.stop()
 
-# Selección de evento
+# 🧾 INTERFAZ
 evento = st.selectbox("🗂️ Seleccione el evento", df_eventos["Nombre del Curso o Diplomado"].unique())
 password = st.text_input("🔐 Contraseña", type="password")
 
+# 🔎 Validar
 if st.button("✅ Validar"):
     fila_evento = df_eventos[df_eventos["Nombre del Curso o Diplomado"] == evento]
-    
+
     if fila_evento.empty:
-        st.error("❌ Evento no encontrado.")
+        st.warning("⚠️ Evento no encontrado.")
     else:
         codigo = fila_evento.iloc[0]["Código"]
         nombre_archivo = f"{codigo}_{password}.pdf"
-
         fila_pdf = df_aprobados[df_aprobados["Nombre de Archivo"] == nombre_archivo]
 
         if not fila_pdf.empty:
             enlace = fila_pdf.iloc[0]["Enlace"]
             st.success("✅ Certificado encontrado.")
-            st.markdown(f"[📄 Descargar certificado]({enlace})", unsafe_allow_html=True)
+            st.markdown(f"""
+                <div style="text-align:center; margin-top:20px;">
+                    <a href="{enlace}" target="_blank">
+                        <button style="background-color:{COLOR_BOTON}; color:{COLOR_TEXTO};
+                            padding:10px 20px; border:none; border-radius:5px;
+                            font-size:16px; font-weight:bold; cursor:pointer;">
+                            📄 Descargar Certificado
+                        </button>
+                    </a>
+                </div>
+            """, unsafe_allow_html=True)
         else:
             st.error("❌ Contraseña inválida o revise si el evento es correcto.")
+
+# 📌 PIE DE PÁGINA
+st.markdown(f"""
+    <hr style="margin-top:40px; border-color:#dcdcda;">
+    <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
+        Aplicación oficial de validación - CIEC
+    </div>
+""", unsafe_allow_html=True)
