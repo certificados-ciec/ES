@@ -76,6 +76,9 @@ st.markdown(f"""
         Los diplomas solo estarán disponibles hasta 1 año después de finalizado el evento, curso o diplomado.
     </div>
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
-        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>. E-mail: ciec@uptc.edu.co
+        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>.
+    </div>
+    <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
+        En caso de presentarse problemas o no encontrar su certificado, comunicarse a ciec@uptc.edu.co
     </div>
 """, unsafe_allow_html=True)
