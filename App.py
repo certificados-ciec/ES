@@ -38,7 +38,7 @@ except:
     st.stop()
 
 # 🧾 INTERFAZ
-evento = st.selectbox("🗂️ Seleccione el nombre del curso, diplomado o evento"<sup>*</sup>, df_eventos["Nombre"].unique())
+evento = st.selectbox("🗂️ Seleccione el nombre del curso, diplomado o evento*", df_eventos["Nombre"].unique())
 password = st.text_input("🔐 Contraseña", type="password")
 
 # 🔎 Validar
