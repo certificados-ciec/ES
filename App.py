@@ -73,6 +73,12 @@ if st.button("✅ Validar"):
 st.markdown(f"""
     <hr style="margin-top:40px; border-color:#dcdcda;">
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
-        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong> ciec@uptc.edu.co
+        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>. E-mail: ciec@uptc.edu.co
+    </div>
+""", unsafe_allow_html=True)
+st.markdown(f"""
+    <hr style="margin-top:40px; border-color:#dcdcda;">
+    <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
+        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>. E-mail: ciec@uptc.edu.co
     </div>
 """, unsafe_allow_html=True)
