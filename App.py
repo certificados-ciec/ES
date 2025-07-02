@@ -76,9 +76,8 @@ st.markdown(f"""
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
         En caso de presentarse problemas o no encontrar su certificado, comunicarse a ciec@uptc.edu.co
     </div>
-    <div>
-
-    </div>
+    </n>
+    </n>
 """, unsafe_allow_html=True)
 
 # 📌 PIE DE PÁGINA
