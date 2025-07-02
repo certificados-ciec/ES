@@ -70,6 +70,8 @@ if st.button("✅ Validar"):
             st.error("❌ Contraseña inválida o revise si el evento es correcto.")
 
 st.markdown(f"""
+    <br>
+    <br>
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
         Los diplomas solo estarán disponibles hasta 1 año después de finalizado el evento, curso o diplomado.
     </div>
@@ -80,9 +82,9 @@ st.markdown(f"""
 
 # 📌 PIE DE PÁGINA
 st.markdown(f"""
-     </n>
-     </n>
-     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
+     <br>
+     <br>
+     <div style="border-top: 1px solid #dcdcda; margin-top: 40px; padding-top: 10px; text-align: center; font-size: 13px; color: {COLOR_TEXTO};">
         Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>.
     </div>
 """, unsafe_allow_html=True)
