@@ -38,7 +38,7 @@ except:
     st.stop()
 
 # 🧾 INTERFAZ
-evento = st.selectbox("🗂️ Seleccione el nombre del curso, diplomado o evento", df_eventos["Nombre"].unique())
+evento = st.selectbox("🗂️ Seleccione el nombre del curso, diplomado o evento<sup>*</sup>", df_eventos["Nombre"].unique())
 password = st.text_input("🔐 Contraseña", type="password")
 
 # 🔎 Validar
@@ -71,11 +71,10 @@ if st.button("✅ Validar"):
 
 st.markdown(f"""
     <br>
-    <div style="text-align:center; font-size:10px; color:{COLOR_TEXTO};">
+    <div style="text-align:center; font-size:11px; color:{COLOR_TEXTO};">
         *Los diplomas solo estarán disponibles hasta 1 año después de finalizado el evento, curso o diplomado.
     </div>
-    <br>
-""", unsafe_allow_html=True)
+  """, unsafe_allow_html=True)
 
 # 📌 PIE DE PÁGINA
 st.markdown(f"""
