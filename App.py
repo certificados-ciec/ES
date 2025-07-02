@@ -38,12 +38,12 @@ except:
     st.stop()
 
 # 🧾 INTERFAZ
-evento = st.selectbox("🗂️ Seleccione el evento", df_eventos["Nombre del Curso o Diplomado"].unique())
+evento = st.selectbox("🗂️ Seleccione el evento", df_eventos["Nombre"].unique())
 password = st.text_input("🔐 Contraseña", type="password")
 
 # 🔎 Validar
 if st.button("✅ Validar"):
-    fila_evento = df_eventos[df_eventos["Nombre del Curso o Diplomado"] == evento]
+    fila_evento = df_eventos[df_eventos["Nombre"] == evento]
 
     if fila_evento.empty:
         st.warning("⚠️ Evento no encontrado.")
