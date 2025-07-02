@@ -69,16 +69,16 @@ if st.button("✅ Validar"):
         else:
             st.error("❌ Contraseña inválida o revise si el evento es correcto.")
 
-# 📌 PIE DE PÁGINA
-st.markdown(f"""
-    <hr style="margin-top:40px; border-color:#dcdcda;">
+   <hr style="margin-top:40px; border-color:#dcdcda;">
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
         Los diplomas solo estarán disponibles hasta 1 año después de finalizado el evento, curso o diplomado.
     </div>
-    <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
-        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>.
-    </div>
-    <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
+        <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
         En caso de presentarse problemas o no encontrar su certificado, comunicarse a ciec@uptc.edu.co
+    </div>
+# 📌 PIE DE PÁGINA
+st.markdown(f"""
+     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
+        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>.
     </div>
 """, unsafe_allow_html=True)
