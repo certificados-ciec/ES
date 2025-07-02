@@ -19,7 +19,7 @@ st.markdown(f"""
         <img src="{LOGO_URL}" width="800">
         <h1 style="color:{COLOR_TITULO}; margin-bottom:0;">Validación de Participación</h1>
         <p style="font-size:18px; color:{COLOR_TEXTO}; margin-top:5px;">
-            Ingrese el curso, diplomado o evento, junto con su contraseña, para descargar su certificado (disponible por 15 meses, luego de la finalización).
+            Ingrese el curso, diplomado o evento, junto con su contraseña, para descargar su certificado.
         </p>
     </div>
 """, unsafe_allow_html=True)
@@ -73,11 +73,8 @@ if st.button("✅ Validar"):
 st.markdown(f"""
     <hr style="margin-top:40px; border-color:#dcdcda;">
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
-        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>. E-mail: ciec@uptc.edu.co
+        Los diplomas solo estarán disponibles hasta 1 año después de finalizado el evento, curso o diplomado.
     </div>
-""", unsafe_allow_html=True)
-st.markdown(f"""
-    <hr style="margin-top:40px; border-color:#dcdcda;">
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
         Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>. E-mail: ciec@uptc.edu.co
     </div>
