@@ -70,12 +70,14 @@ if st.button("✅ Validar"):
             st.error("❌ Contraseña inválida o revise si el evento es correcto.")
 
 st.markdown(f"""
-   <hr style="margin-top:40px; border-color:#dcdcda;">
     <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
         Los diplomas solo estarán disponibles hasta 1 año después de finalizado el evento, curso o diplomado.
     </div>
-        <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
+    <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
         En caso de presentarse problemas o no encontrar su certificado, comunicarse a ciec@uptc.edu.co
+    </div>
+    <div>
+
     </div>
 """, unsafe_allow_html=True)
 
