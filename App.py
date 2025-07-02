@@ -71,11 +71,8 @@ if st.button("✅ Validar"):
 
 st.markdown(f"""
     <br>
-    <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
-        Los diplomas solo estarán disponibles hasta 1 año después de finalizado el evento, curso o diplomado.
-    </div>
-    <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
-        En caso de presentarse problemas o no encontrar su certificado, comunicarse a ciec@uptc.edu.co
+    <div style="text-align:center; font-size:10px; color:{COLOR_TEXTO};">
+        *Los diplomas solo estarán disponibles hasta 1 año después de finalizado el evento, curso o diplomado.
     </div>
     <br>
 """, unsafe_allow_html=True)
@@ -83,6 +80,6 @@ st.markdown(f"""
 # 📌 PIE DE PÁGINA
 st.markdown(f"""
     <div style="border-top: 1px solid #dcdcda; margin-top: 40px; padding-top: 10px; text-align: center; font-size: 13px; color: {COLOR_TEXTO};">
-        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>.
+        Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>
     </div>
 """, unsafe_allow_html=True)
