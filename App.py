@@ -19,7 +19,7 @@ st.markdown(f"""
         <img src="{LOGO_URL}" width="800">
         <h1 style="color:{COLOR_TITULO}; margin-bottom:0;">Validación de Participación</h1>
         <p style="font-size:18px; color:{COLOR_TEXTO}; margin-top:5px;">
-            Ingrese el curso, diplomado o evento y su contraseña para descargar su certificado.
+            Ingrese el curso, diplomado o evento, junto con su contraseña, para descargar su certificado.
         </p>
     </div>
 """, unsafe_allow_html=True)
