@@ -80,6 +80,8 @@ st.markdown(f"""
 
 # 📌 PIE DE PÁGINA
 st.markdown(f"""
+     </n>
+     </n>
      <div style="text-align:center; font-size:13px; color:{COLOR_TEXTO};">
         Aplicación desarrollada por el <strong>CIEC - Facultad de Ciencias UPTC</strong>.
     </div>
