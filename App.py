@@ -15,7 +15,7 @@ URL_EVENTOS = "https://docs.google.com/spreadsheets/d/1jtnIcVBFCRX-lunJk3YCFtxOX
 URL_APROBADOS = "https://docs.google.com/spreadsheets/d/1_Kfc2LDo6kP9e0RgwZQVkRyuQz2_utElTbp5v7aRw-Q/gviz/tq?tqx=out:csv"
 URL_FORM_SOPORTE = "https://forms.gle/82rmSt65KNHQDfC4A"
 
-COLOR_TITULO = "#f0b124"
+COLOR_TITULO = "#f0b124" #prueba
 COLOR_TEXTO = "#000000"
 
 COLUMNAS_EVENTOS = {"Nombre", "Código"}
