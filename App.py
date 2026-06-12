@@ -15,7 +15,7 @@ URL_EVENTOS = "https://docs.google.com/spreadsheets/d/1jtnIcVBFCRX-lunJk3YCFtxOX
 URL_APROBADOS = "https://docs.google.com/spreadsheets/d/1_Kfc2LDo6kP9e0RgwZQVkRyuQz2_utElTbp5v7aRw-Q/gviz/tq?tqx=out:csv"
 URL_FORM_SOPORTE = "https://forms.gle/82rmSt65KNHQDfC4A"
 
-COLOR_TITULO = "#f0b124" #prueba
+COLOR_TITULO = "#f0b124" 
 COLOR_TEXTO = "#000000"
 
 COLUMNAS_EVENTOS = {"Nombre", "Código"}
@@ -30,7 +30,7 @@ def validar_columnas(df: pd.DataFrame, requeridas: set[str], nombre_df: str) -> 
         raise ValueError(f"En '{nombre_df}' faltan columnas requeridas: {faltantes_txt}")
 
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(show_spinner=False, ttl=60)
 def cargar_datos() -> tuple[pd.DataFrame, pd.DataFrame]:
     df_eventos = pd.read_csv(URL_EVENTOS, dtype=str).fillna("")
     df_aprobados = pd.read_csv(URL_APROBADOS, dtype=str).fillna("")
